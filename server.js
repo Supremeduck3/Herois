@@ -1,6 +1,7 @@
 
 import express from "express";
 import dotenv from "dotenv";
+import heroisRoutes from "./routes/heroisRoutes.js"
 
 
 const app = express();
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
     res.send("🚀 Servidor funcionando...");
 });
 
+app.use("/herois",heroisRoutes)
 
 app.listen(serverPort, () => {
     console.log(`🚀 Servidor rodando em http://localhost:${serverPort} 🚀`);
