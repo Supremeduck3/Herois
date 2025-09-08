@@ -10,4 +10,5 @@ const getAllHerois = (req, res) => {
     })
 }
 
+
 export {getAllHerois}
